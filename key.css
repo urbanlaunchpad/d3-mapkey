@@ -12,6 +12,8 @@
 }
 #bar-container {
 	height: 25px;
+	border-left: 1px solid #000;
+	border-right: 2px solid #000;
 }
 #tick-container {
 	position: relative;
@@ -33,11 +35,12 @@ div.tick {
 	float: left;
 	width: 0px;
 	height: 25px;
-	border-right: 1px solid #000;
+	border-left: 1px solid #000;
+	margin-left: -1px;
 }
-div.tick:nth-child(1) {
+/*div.tick:nth-child(1) {
 	border-left: 2px solid #000;
 }
 div.tick:nth-last-child(1) {
 	border-right: 2px solid #000;
-}
+}*/
