@@ -11,18 +11,21 @@
 
 		<script type="text/javascript">
 
-		var data_value = [ 25, 25, 30, 20 ];
-		var data_color = [ "e5e2d5", "dcb7a3", "d28b6f", "be534c" ];
+		var data_value = [ 25, 25, 25, 25 ];
+		var data_color = [ "fed492", "e7a077", "c85a52", "b12937" ];
 		//var data_label = [ "LMA", "", "MMA", "HMA" ];
 		var data_description = [ "Low Minority Areas", "", "Mixed Minority Areas", "High Minority Areas" ];
-		var data_plabel = [ "0%", "25%", "50%", "80%" ];
+		var data_plabel = [ "0", "50", "100", "150+" ];
 
 		d3.select("body")
 			.append("div")
 			.attr("id","key-container")
 			.append("h3")
-			.text("Percent Non-White Hispanic by census tract")
-			.style("margin-bottom", "0.5em");
+			.text("Population Density")
+			.style("margin-bottom", "0.5em")
+			.append("h6")
+			.text("Persons/ha")
+			.style("text-transform", "uppercase");
 
 		d3.select("body #key-container")
 			.append("div")

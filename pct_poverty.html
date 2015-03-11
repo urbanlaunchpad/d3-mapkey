@@ -11,18 +11,21 @@
 
 		<script type="text/javascript">
 
-		var data_value = [ 50, 30, 20 ];
-		var data_color = [ "e5e2d5", "adbfc6", "789cad" ];
-		var data_label = [ "LMA", "MMA", "HMA" ];
-		var data_description = [ "Low Minority Areas", "Mixed Minority Areas", "High Minority Areas" ];
-		var data_plabel = [ "0%", "50%", "80%" ];
+		var data_value = [ 20,20,20,20,20 ];
+		var data_color = [ "347b7f", "a5c5c6", "ebe3d7", "f4c790", "e5640c" ];
+		//var data_label = [ "LMA", "", "MMA", "HMA" ];
+		var data_description = [ "Low Minority Areas", "", "Mixed Minority Areas", "High Minority Areas" ];
+		var data_plabel = [ "0%", "15%", "20%", "25%", "30%" ];
 
 		d3.select("body")
 			.append("div")
 			.attr("id","key-container")
 			.append("h3")
-			.text("Percent Minority by Census Tract")
-			.style("margin-bottom", "0.5em");
+			.text("Percentage Poverty")
+			.style("margin-bottom", "0.5em")
+			// .append("h6")
+			// .text("Persons/ha")
+			// .style("text-transform", "uppercase");
 
 		d3.select("body #key-container")
 			.append("div")
@@ -39,15 +42,15 @@
 			.append("div")
 			.attr("id","plabel-container");
 
-		d3.select("body #label-container").selectAll("div.bar")
-			.data(data_value)
-			.enter()
-			.append("div")
-			.style("width", function(d) {
-				return d + "%";
-				})
-			.data(data_label)
-			.append("h5").text(function(d) { return d; });
+		// d3.select("body #label-container").selectAll("div.bar")
+		// 	.data(data_value)
+		// 	.enter()
+		// 	.append("div")
+		// 	.style("width", function(d) {
+		// 		return d + "%";
+		// 		})
+		// 	.data(data_label)
+		// 	.append("h5").text(function(d) { return d; });
 
 		d3.select("body #bar-container").selectAll("div.bar")
 			.data(data_value)
@@ -71,9 +74,6 @@
 			.attr("class","tick")
 			.style("padding-left", function(d) {
 				return d + "%";
-				})
-			.style("margin-left", function(d) {
-				return "-2px";
 				});
 
 		d3.select("body #plabel-container").selectAll("div.bar")
